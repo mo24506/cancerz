@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="CancerZ Academy — discover, understand, transform." />
+  <title>CancerZ Academy | Discover. Understand. Transform.</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="CancerZ Academy home">
+        <img src="assets/logo-cropped.jpg" alt="CancerZ logo" />
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+
+      <nav id="mainNav" class="main-nav">
+        <a href="#courses">Courses</a>
+        <a href="#tracks">Learning Tracks</a>
+        <a href="#mentors">Mentors</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="nav-cta">Join Academy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-orbit orbit-a"></div>
+      <div class="hero-orbit orbit-b"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span></span> THE NEXT GENERATION OF CANCER EDUCATION</p>
+          <h1>Learn science.<br /><em>Build impact.</em></h1>
+          <p class="hero-text">
+            A modern online academy for students, researchers, and curious minds who want
+            practical knowledge across cancer biology, biotechnology, data, and innovation.
+          </p>
+          <div class="hero-actions">
+            <a href="#courses" class="btn btn-primary">Explore courses <span>→</span></a>
+            <a href="#tracks" class="btn btn-ghost">View learning tracks</a>
+          </div>
+          <div class="hero-proof">
+            <div><strong>12+</strong><span>Practical courses</span></div>
+            <div><strong>04</strong><span>Learning tracks</span></div>
+            <div><strong>100%</strong><span>Online & flexible</span></div>
+          </div>
+        </div>
+
+        <div class="hero-card reveal">
+          <div class="hero-card-top">
+            <span class="mini-label">FEATURED PATH</span>
+            <span class="status-dot"><i></i> Open for enrollment</span>
+          </div>
+          <div class="hero-card-art">
+            <div class="dna-line"></div>
+            <div class="cell-grid">
+              <span></span><span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <div class="floating-tag tag-one">Cancer Biology</div>
+            <div class="floating-tag tag-two">Bioinformatics</div>
+            <div class="floating-tag tag-three">Research Skills</div>
+          </div>
+          <div class="hero-card-bottom">
+            <div>
+              <span class="course-label">START HERE</span>
+              <h3>Foundations of Cancer Biology</h3>
+            </div>
+            <button class="circle-arrow" data-course="Foundations of Cancer Biology" aria-label="Enroll">↗</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section intro-band">
+      <div class="container intro-grid">
+        <p class="section-kicker">WHY CANCERZ?</p>
+        <h2>From complex concepts to <span>clear, practical understanding.</span></h2>
+        <p class="muted">
+          We combine scientific depth with accessible teaching so you can understand the “why”,
+          practice the “how,” and move confidently into research, projects, and careers.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="courses">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">COURSES</p>
+            <h2>Learn at your own pace.</h2>
+          </div>
+          <div class="filters" role="group" aria-label="Filter courses">
+            <button class="filter active" data-filter="all">All</button>
+            <button class="filter" data-filter="biology">Biology</button>
+            <button class="filter" data-filter="data">Data & AI</button>
+            <button class="filter" data-filter="research">Research</button>
+          </div>
+        </div>
+
+        <div class="course-grid">
+          <article class="course-card" data-category="biology">
+            <div class="course-meta"><span class="pill purple">BIOLOGY</span><span>6 weeks</span></div>
+            <h3>Foundations of Cancer Biology</h3>
+            <p>Cells, hallmarks, signaling, tumor microenvironment, progression, and therapeutic logic.</p>
+            <div class="course-footer"><span>Beginner</span><button class="text-btn" data-course="Foundations of Cancer Biology">Learn more →</button></div>
+          </article>
+
+          <article class="course-card featured" data-category="data">
+            <div class="course-meta"><span class="pill teal">DATA & AI</span><span>4 weeks</span></div>
+            <div class="featured-label">MOST POPULAR</div>
+            <h3>AI for Biotechnology</h3>
+            <p>Turn biological questions into data-driven workflows using AI-assisted research methods.</p>
+            <div class="course-footer"><span>Intermediate</span><button class="text-btn" data-course="AI for Biotechnology">Learn more →</button></div>
+          </article>
+
+          <article class="course-card" data-category="research">
+            <div class="course-meta"><span class="pill navy">RESEARCH</span><span>3 weeks</span></div>
+            <h3>Research Skills Lab</h3>
+            <p>Literature search, critical reading, study design, scientific writing, and presentation.</p>
+            <div class="course-footer"><span>All levels</span><button class="text-btn" data-course="Research Skills Lab">Learn more →</button></div>
+          </article>
+
+          <article class="course-card" data-category="biology">
+            <div class="course-meta"><span class="pill purple">BIOLOGY</span><span>5 weeks</span></div>
+            <h3>Molecular Oncology</h3>
+            <p>Explore genomic alterations, biomarkers, pathways, resistance, and precision medicine.</p>
+            <div class="course-footer"><span>Advanced</span><button class="text-btn" data-course="Molecular Oncology">Learn more →</button></div>
+          </article>
+
+          <article class="course-card" data-category="data">
+            <div class="course-meta"><span class="pill teal">DATA & AI</span><span>4 weeks</span></div>
+            <h3>Bioinformatics Starter</h3>
+            <p>Understand sequence data, biological databases, analysis logic, and reproducible workflows.</p>
+            <div class="course-footer"><span>Beginner</span><button class="text-btn" data-course="Bioinformatics Starter">Learn more →</button></div>
+          </article>
+
+          <article class="course-card" data-category="research">
+            <div class="course-meta"><span class="pill navy">RESEARCH</span><span>2 weeks</span></div>
+            <h3>Scientific Communication</h3>
+            <p>Build better posters, slides, abstracts, visual summaries, and scientific narratives.</p>
+            <div class="course-footer"><span>All levels</span><button class="text-btn" data-course="Scientific Communication">Learn more →</button></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tracks" id="tracks">
+      <div class="container">
+        <div class="section-heading compact">
+          <div>
+            <p class="section-kicker">LEARNING TRACKS</p>
+            <h2>Choose your direction.</h2>
+          </div>
+          <p class="muted max-copy">Stack courses into a simple pathway built around the skills you want next.</p>
+        </div>
+
+        <div class="track-grid">
+          <div class="track-card track-card-clickable" tabindex="0" role="button" data-track="Cancer Biology" aria-label="Open Cancer Biology webinars">
+            <span class="track-number">01</span>
+            <div class="track-icon">◌</div>
+            <h3>Cancer Biology</h3>
+            <p>Build strong biological foundations before diving into advanced oncology.</p>
+            <button class="track-open-btn" type="button">Explore webinars →</button>
+          </div>
+          <div class="track-card">
+            <span class="track-number">02</span>
+            <div class="track-icon">⌬</div>
+            <h3>Biotech + AI</h3>
+            <p>Connect biotechnology questions with modern AI and computational thinking.</p>
+            <a href="#courses">Explore path →</a>
+          </div>
+          <div class="track-card">
+            <span class="track-number">03</span>
+            <div class="track-icon">↗</div>
+            <h3>Research Ready</h3>
+            <p>Move from reading papers to designing, communicating, and defending your work.</p>
+            <a href="#courses">Explore path →</a>
+          </div>
+          <div class="track-card">
+            <span class="track-number">04</span>
+            <div class="track-icon">✦</div>
+            <h3>Career Builder</h3>
+            <p>Turn technical learning into portfolio pieces, confidence, and opportunities.</p>
+            <a href="#courses">Explore path →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section mentors" id="mentors">
+      <div class="container">
+        <div class="section-heading compact">
+          <div>
+            <p class="section-kicker">MENTORS</p>
+            <h2>Learn from people who build.</h2>
+          </div>
+        </div>
+        <div class="mentor-grid">
+          <article class="mentor-card">
+            <div class="avatar avatar-a">CB</div>
+            <div><h3>Cancer Biology</h3><p>Research-focused sessions</p></div>
+          </article>
+          <article class="mentor-card">
+            <div class="avatar avatar-b">AI</div>
+            <div><h3>Biotech + AI</h3><p>Applied computational thinking</p></div>
+          </article>
+          <article class="mentor-card">
+            <div class="avatar avatar-c">RS</div>
+            <div><h3>Research Skills</h3><p>Practical academic workflows</p></div>
+          </article>
+          <article class="mentor-card">
+            <div class="avatar avatar-d">CM</div>
+            <div><h3>Career Mentors</h3><p>Portfolio & next steps</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="container about-panel">
+        <div>
+          <p class="section-kicker">ABOUT THE ACADEMY</p>
+          <h2>Discover.<br /><span>Understand.</span><br />Transform.</h2>
+        </div>
+        <div class="about-copy">
+          <p>
+            CancerZ Academy is designed as a clean, focused learning environment where scientific
+            knowledge feels usable—not overwhelming.
+          </p>
+          <p>
+            The experience is intentionally simple: choose a course, learn in short modules,
+            practice with real research-style tasks, and leave with something you can apply.
+          </p>
+          <a href="#contact" class="btn btn-primary">Join the academy <span>→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta-section" id="contact">
+      <div class="container cta">
+        <div>
+          <p class="section-kicker">START YOUR JOURNEY</p>
+          <h2>Build your next<br /><em>scientific advantage.</em></h2>
+        </div>
+        <form class="signup-form" id="signupForm">
+          <label for="email">Get updates on new courses</label>
+          <div class="form-row">
+            <input id="email" type="email" placeholder="your@email.com" required />
+            <button class="btn btn-primary" type="submit">Join free <span>→</span></button>
+          </div>
+          <small id="formMessage">No spam. Just course updates and opportunities.</small>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <img src="assets/logo-cropped.jpg" alt="CancerZ" class="footer-logo" />
+        <p>Online learning for the next generation of cancer science.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#courses">Courses</a>
+        <a href="#tracks">Tracks</a>
+        <a href="#mentors">Mentors</a>
+        <a href="#about">About</a>
+      </div>
+      <p class="copyright">© 2026 CancerZ Academy</p>
+    </div>
+  </footer>
+
+  <div class="modal" id="webinarModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-webinar></div>
+    <div class="modal-card webinar-modal-card" role="dialog" aria-modal="true" aria-labelledby="webinarModalTitle">
+      <button class="modal-close" data-close-webinar aria-label="Close">×</button>
+
+      <div class="webinar-modal-head">
+        <div>
+          <p class="section-kicker">CANCER BIOLOGY</p>
+          <h2 id="webinarModalTitle">Webinars</h2>
+          <p class="muted">Watch uploaded sessions and keep your webinar library in one place.</p>
+        </div>
+        <label class="upload-webinar-btn">
+          <input id="webinarVideoInput" type="file" accept="video/*" hidden />
+          + Upload webinar
+        </label>
+      </div>
+
+      <div id="webinarList" class="webinar-list">
+        <article class="webinar-item">
+          <div class="webinar-thumbnail webinar-gradient">
+            <span>WEBINAR</span>
+          </div>
+          <div class="webinar-info">
+            <div class="webinar-topline">
+              <span class="pill purple">CANCER BIOLOGY</span>
+              <span>Replay</span>
+            </div>
+            <h3>Introduction to Cancer Biology</h3>
+            <p>Upload your first webinar video to replace this demo item.</p>
+            <button class="text-btn demo-webinar-btn" type="button">Open demo</button>
+          </div>
+        </article>
+      </div>
+
+      <div class="upload-note">
+        <strong>How this works:</strong> choose an MP4/MOV/WebM video from your computer.
+        It will appear here immediately as a webinar preview. This front-end version keeps the
+        selected video in your browser session; permanent online storage needs a video hosting
+        or backend service.
+      </div>
+
+      <video id="webinarPlayer" class="webinar-player" controls playsinline hidden></video>
+    </div>
+  </div>
+
+  <div class="modal" id="courseModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" data-close-modal aria-label="Close">×</button>
+      <p class="section-kicker">COURSE PREVIEW</p>
+      <h2 id="modalTitle">Course title</h2>
+      <p id="modalDescription" class="muted"></p>
+      <div class="modal-detail"><span>Format</span><strong>Online • Self-paced</strong></div>
+      <div class="modal-detail"><span>Access</span><strong>Free demo template</strong></div>
+      <button class="btn btn-primary" id="modalEnroll">Start learning <span>→</span></button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
