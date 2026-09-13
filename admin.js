@@ -1,5 +1,5 @@
 const SUPABASE_URL="https://gqvxoasacisbouoydpkm.supabase.co";
-const SUPABASE_PUBLISHABLE_KEY="PASTE_YOUR_SUPABASE_PUBLISHABLE_KEY_HERE";
+const SUPABASE_PUBLISHABLE_KEY="sb_publishable__68a0FPD6R2Ar0JPZw0waA_eiKbCNYC";
 const ADMIN_UID="74d5d81f-8bbb-40f8-99fc-b16e1bfa3f5f";
 
 if (!window.supabase) throw new Error("Supabase library failed to load.");
