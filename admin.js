@@ -1,5 +1,5 @@
 const SUPABASE_URL="https://gqvxoasacisbouoydpkm.supabase.co";
-const SUPABASE_PUBLISHABLE_KEY="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdxdnhvYXNhY2lzYm91b3lkcGttIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODkyODU2MDEsImV4cCI6MjEwNDg2MTYwMX0.WriWEPXzLaTlGu8sa11yaFfqrpgDUcma97Nx8LPAQUQ";
+const SUPABASE_PUBLISHABLE_KEY="sb_publishable_cNQKtVxfeCkqP3yZO1-dSA_4sOJRUZ0";
 const ADMIN_UID="74d5d81f-8bbb-40f8-99fc-b16e1bfa3f5f";
 
 if (!window.supabase) throw new Error("Supabase library failed to load.");
