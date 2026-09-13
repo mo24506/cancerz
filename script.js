@@ -183,3 +183,44 @@ document.querySelector(".demo-webinar-btn")?.addEventListener("click", () => {
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") closeWebinars();
 });
+
+
+/* ---------- Live Supabase webinar library ---------- */
+async function loadLiveWebinars(){
+  try{
+    if(!window.supabase || !window.CANCERZ_SUPABASE || !window.CANCERZ_SUPABASE.PUBLISHABLE_KEY ||
+       window.CANCERZ_SUPABASE.PUBLISHABLE_KEY==="PASTE_YOUR_PUBLIC_SUPABASE_KEY_HERE") return;
+    const sb=window.supabase.createClient(window.CANCERZ_SUPABASE.URL,window.CANCERZ_SUPABASE.PUBLISHABLE_KEY);
+    const {data,error}=await sb.from("webinars").select("id,title,category,description,video_url,thumbnail_url,created_at").eq("status","published").order("created_at",{ascending:false});
+    if(error) return;
+    if(!webinarList) return;
+    if(!data || data.length===0) return;
+    webinarList.innerHTML=data.map(w=>`
+      <article class="webinar-item">
+        <div class="webinar-thumbnail ${w.thumbnail_url ? "has-thumbnail" : "webinar-gradient"}">
+          ${w.thumbnail_url ? `<img src="${w.thumbnail_url}" alt="" style="width:100%;height:100%;object-fit:cover;border-radius:14px">` : "<span>WEBINAR</span>"}
+        </div>
+        <div class="webinar-info">
+          <div class="webinar-topline">
+            <span class="pill teal">${w.category || "WEBINAR"}</span>
+            <span>Replay</span>
+          </div>
+          <h3>${String(w.title||"Webinar").replace(/[&<>"']/g,"")}</h3>
+          <p>${String(w.description||"").replace(/[&<>"']/g,"")}</p>
+          <button class="text-btn live-watch-btn" type="button" data-video="${w.video_url||""}">Watch webinar →</button>
+        </div>
+      </article>`).join("");
+    webinarList.querySelectorAll(".live-watch-btn").forEach(btn=>{
+      btn.addEventListener("click",()=>{
+        if(!btn.dataset.video) return;
+        webinarPlayer.hidden=false;
+        webinarPlayer.src=btn.dataset.video;
+        webinarPlayer.load();
+        webinarPlayer.play().catch(()=>{});
+      });
+    });
+  }catch(e){
+    console.warn("Live webinar loading skipped.",e);
+  }
+}
+loadLiveWebinars();
