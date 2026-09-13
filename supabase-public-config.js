@@ -1,0 +1,1 @@
+window.CANCERZ_SUPABASE={URL:"https://gqvxoasacisbouoydpkm.supabase.co",PUBLISHABLE_KEY:"PASTE_YOUR_PUBLIC_SUPABASE_KEY_HERE"};
