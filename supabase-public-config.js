@@ -1,1 +1,1 @@
-window.CANCERZ_SUPABASE={URL:"https://gqvxoasacisbouoydpkm.supabase.co",PUBLISHABLE_KEY:"PASTE_YOUR_PUBLIC_SUPABASE_KEY_HERE"};
+window.CANCERZ_SUPABASE={URL:"https://gqvxoasacisbouoydpkm.supabase.co",PUBLISHABLE_KEY:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdxdnhvYXNhY2lzYm91b3lkcGttIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODkyODU2MDEsImV4cCI6MjEwNDg2MTYwMX0.WriWEPXzLaTlGu8sa11yaFfqrpgDUcma97Nx8LPAQUQ"};
