@@ -30,12 +30,10 @@ filters.forEach(filter => {
 });
 
 const descriptions = {
-  "Foundations of Cancer Biology": "A structured introduction to the biological principles that explain how cancer begins, progresses, and responds to intervention.",
-  "AI for Biotechnology": "A practical introduction to using AI-assisted methods to explore biological questions, organize information, and design smarter workflows.",
-  "Research Skills Lab": "A hands-on pathway covering literature search, critical reading, study design, scientific writing, and presenting your work.",
-  "Molecular Oncology": "Dive deeper into genomic changes, molecular pathways, biomarkers, resistance, and the logic behind precision oncology.",
-  "Bioinformatics Starter": "Learn the mental models behind sequence data, biological databases, analysis pipelines, and reproducible computational work.",
-  "Scientific Communication": "Turn scientific ideas into clear posters, slides, abstracts, visual summaries, and stories that make sense to your audience."
+  "Beginner Tier 1 — Introductory Course": "Start your CancerZ journey with the essential foundations of cancer biology, terminology, and scientific thinking.",
+  "Intermediate — Level 2 Course": "Build deeper scientific understanding through applied concepts, case-based learning, and stronger research skills.",
+  "Professional / Expert Level Course": "Move into advanced cancer science with professional-level concepts, analytical thinking, and research-oriented practice.",
+  "Cancer Biologist Level + Mentorship": "Reach the highest CancerZ level with advanced scientific development, guided mentorship, and career-focused direction."
 };
 
 const modal = document.getElementById("courseModal");
