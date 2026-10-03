@@ -32,7 +32,7 @@
       <div class="container hero-grid">
         <div class="hero-copy reveal">
           <p class="eyebrow"><span></span> THE NEXT GENERATION OF CANCER EDUCATION</p>
-          <h1>Brought to you by Prof. Dr.<br /><em>Hussein Sabit</em></h1>
+          <h1>Brought to you by Prof. Dr.<br /><button class="sabit-trigger" id="sabitTrigger" type="button" aria-label="Open Prof. Hussein Sabit profile">Hussein Sabit</button></h1>
           <p class="hero-text">
             A modern online academy for students, researchers, and curious minds who want
             practical knowledge across cancer biology, biotechnology, data, and innovation.
@@ -284,6 +284,69 @@
 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="supabase-public-config.js?v=2"></script>
+
+  <div class="modal" id="sabitModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-sabit></div>
+    <div class="modal-card sabit-modal-card" role="dialog" aria-modal="true" aria-labelledby="sabitModalTitle">
+      <button class="modal-close" data-close-sabit aria-label="Close">×</button>
+      <div class="sabit-modal-head">
+        <p class="section-kicker">PROF. HUSSEIN SABIT</p>
+        <h2 id="sabitModalTitle">Cancer Biology • Epigenetics • Precision Oncology</h2>
+        <p class="muted">A concise scientific profile built from Prof. Sabit’s academic biography, research programme, and documented research impact.</p>
+      </div>
+
+      <div class="sabit-panels">
+        <article class="sabit-panel">
+          <div class="sabit-panel-index">01</div>
+          <p class="section-kicker">SCIENTIFIC PROFILE</p>
+          <h3>Molecular genetics with a systems view of cancer.</h3>
+          <p>Prof. Hussein Sabit is a molecular geneticist and cancer researcher specializing in cancer epigenetics, breast cancer biology, tumor microenvironment, molecular oncology, and precision medicine.</p>
+          <div class="sabit-meta">
+            <span>Professor of Cancer Epigenetics</span>
+            <span>College of Biotechnology, MUST • Egypt</span>
+          </div>
+          <div class="sabit-education">
+            <span><strong>PhD</strong> Molecular Genetics · Ain Shams University · 2007</span>
+            <span><strong>MSc</strong> Genetics · Ain Shams University · 2002</span>
+            <span><strong>BSc</strong> Genetics · Ain Shams University · 1997</span>
+          </div>
+        </article>
+
+        <article class="sabit-panel">
+          <div class="sabit-panel-index">02</div>
+          <p class="section-kicker">RESEARCH PROGRAMME</p>
+          <h3>From molecular mechanisms to precision oncology.</h3>
+          <p>His work examines tumors as dynamic ecosystems shaped by epigenetic regulation, immune and stromal interactions, metabolism, non-coding RNAs, and genomic regulation.</p>
+          <div class="sabit-tags">
+            <span>Cancer Epigenetics</span><span>Breast Cancer Biology</span><span>Tumor Microenvironment</span>
+            <span>Precision & Systems Oncology</span><span>Genome Editing</span><span>Molecular Biomarkers</span>
+            <span>Cancer Therapeutics</span><span>Multi-Omics</span><span>Single-Cell Biology</span>
+            <span>AI & Precision Medicine</span><span>Liquid Biopsy</span><span>Drug Resistance</span>
+          </div>
+        </article>
+
+        <article class="sabit-panel">
+          <div class="sabit-panel-index">03</div>
+          <p class="section-kicker">IMPACT & LEADERSHIP</p>
+          <h3>A research programme built around translation, mentorship, and collaboration.</h3>
+          <div class="sabit-metrics">
+            <div><strong>114</strong><span>Peer-reviewed publications</span></div>
+            <div><strong>2,420</strong><span>Citations</span></div>
+            <div><strong>26</strong><span>h-index</span></div>
+            <div><strong>49</strong><span>Q1 publications</span></div>
+            <div><strong>63</strong><span>Postgraduate researchers supervised</span></div>
+            <div><strong>23</strong><span>PhD candidates supervised</span></div>
+          </div>
+          <div class="sabit-leadership">
+            <span>Vice Dean for Graduate Studies & Research • MUST</span>
+            <span>Former Head of Genetics • Imam Abdulrahman Bin Faisal University</span>
+            <span>International collaborations across Egypt, Saudi Arabia, Europe, the USA, and Turkey</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+
   <script src="script.js?v=4"></script>
 </body>
 </html>
