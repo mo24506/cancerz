@@ -145,3 +145,205 @@ button{cursor:pointer}
   .webinar-modal-head{display:block}.upload-webinar-btn{display:inline-flex;margin-top:14px}
   .webinar-modal-head h2{font-size:34px}.webinar-item{grid-template-columns:1fr}.webinar-thumbnail{min-height:160px}
 }
+
+
+/* ---------- Prof. Hussein Sabit profile ---------- */
+.sabit-trigger{
+  border:0;
+  padding:0;
+  margin:0;
+  background:transparent;
+  color:var(--purple);
+  font:inherit;
+  font-weight:inherit;
+  line-height:inherit;
+  letter-spacing:inherit;
+  cursor:pointer;
+  text-align:left;
+  position:relative;
+}
+.sabit-trigger:after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:.08em;
+  height:2px;
+  background:var(--teal);
+  transform:scaleX(0);
+  transform-origin:left;
+  transition:transform .25s ease;
+}
+.sabit-trigger:hover:after,.sabit-trigger:focus-visible:after{transform:scaleX(1)}
+.sabit-trigger:focus-visible{outline:3px solid rgba(0,162,158,.18);outline-offset:4px;border-radius:6px}
+.sabit-modal-card{
+  width:min(95vw,1180px);
+  max-height:90vh;
+  overflow:auto;
+  padding:34px;
+}
+.sabit-modal-head{
+  max-width:760px;
+  margin-bottom:24px;
+}
+.sabit-modal-head h2{
+  margin:0 0 10px;
+  color:var(--navy-deep);
+  font-size:clamp(30px,3.8vw,48px);
+  line-height:1.02;
+  letter-spacing:-.04em;
+}
+.sabit-panels{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+}
+.sabit-panel{
+  position:relative;
+  min-height:440px;
+  border:1px solid var(--line);
+  border-radius:22px;
+  padding:24px;
+  background:linear-gradient(180deg,#fff 0%,#fbfbfd 100%);
+  overflow:hidden;
+}
+.sabit-panel:before{
+  content:"";
+  position:absolute;
+  right:-90px;
+  bottom:-90px;
+  width:210px;
+  height:210px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(0,162,158,.12),transparent 68%);
+}
+.sabit-panel:nth-child(2):before{
+  background:radial-gradient(circle,rgba(107,59,143,.13),transparent 68%);
+}
+.sabit-panel:nth-child(3):before{
+  background:radial-gradient(circle,rgba(27,45,100,.12),transparent 68%);
+}
+.sabit-panel-index{
+  color:var(--teal);
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:.16em;
+  margin-bottom:22px;
+}
+.sabit-panel h3{
+  margin:0 0 12px;
+  color:var(--navy-deep);
+  font-size:23px;
+  line-height:1.12;
+  letter-spacing:-.025em;
+  position:relative;
+  z-index:1;
+}
+.sabit-panel p{
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.7;
+  position:relative;
+  z-index:1;
+}
+.sabit-meta{
+  display:grid;
+  gap:7px;
+  margin:18px 0;
+  font-size:11px;
+  color:#687186;
+  position:relative;
+  z-index:1;
+}
+.sabit-meta span:first-child{font-weight:800;color:var(--navy)}
+.sabit-education{
+  display:grid;
+  gap:8px;
+  margin-top:18px;
+  padding-top:16px;
+  border-top:1px solid var(--line);
+  font-size:11px;
+  color:#667085;
+  position:relative;
+  z-index:1;
+}
+.sabit-education strong{color:var(--purple)}
+.sabit-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+  margin-top:18px;
+  position:relative;
+  z-index:1;
+}
+.sabit-tags span{
+  padding:7px 9px;
+  border-radius:999px;
+  background:#f4f7fb;
+  border:1px solid #e4e8f0;
+  color:var(--navy);
+  font-size:9px;
+  font-weight:800;
+  letter-spacing:.02em;
+}
+.sabit-panel:nth-child(2) .sabit-tags span:nth-child(3n){
+  background:#f4edf7;
+  border-color:#eadcf0;
+  color:var(--purple);
+}
+.sabit-panel:nth-child(2) .sabit-tags span:nth-child(2n){
+  background:#eaf8f7;
+  border-color:#d9f0ee;
+  color:#008b87;
+}
+.sabit-metrics{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:10px;
+  margin-top:18px;
+  position:relative;
+  z-index:1;
+}
+.sabit-metrics div{
+  padding:12px;
+  border-radius:15px;
+  background:#f8f9fc;
+  border:1px solid var(--line);
+}
+.sabit-metrics strong{
+  display:block;
+  color:var(--navy);
+  font-size:24px;
+  line-height:1;
+  letter-spacing:-.03em;
+}
+.sabit-metrics span{
+  display:block;
+  margin-top:6px;
+  color:#737b8e;
+  font-size:9px;
+  line-height:1.45;
+}
+.sabit-leadership{
+  display:grid;
+  gap:8px;
+  margin-top:15px;
+  padding-top:15px;
+  border-top:1px solid var(--line);
+  position:relative;
+  z-index:1;
+}
+.sabit-leadership span{
+  color:#667085;
+  font-size:10px;
+  line-height:1.5;
+}
+@media(max-width:900px){
+  .sabit-panels{grid-template-columns:1fr}
+  .sabit-panel{min-height:auto}
+}
+@media(max-width:720px){
+  .sabit-modal-card{padding:24px}
+  .sabit-panel{padding:20px}
+  .sabit-modal-head h2{font-size:32px}
+}
