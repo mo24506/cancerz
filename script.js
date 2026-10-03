@@ -222,3 +222,22 @@ async function loadLiveWebinars(){
   }
 }
 loadLiveWebinars();
+
+
+/* ---------- Prof. Hussein Sabit profile ---------- */
+const sabitModal = document.getElementById("sabitModal");
+const sabitTrigger = document.getElementById("sabitTrigger");
+
+function openSabitProfile(){
+  sabitModal?.classList.add("open");
+  sabitModal?.setAttribute("aria-hidden","false");
+}
+function closeSabitProfile(){
+  sabitModal?.classList.remove("open");
+  sabitModal?.setAttribute("aria-hidden","true");
+}
+sabitTrigger?.addEventListener("click", openSabitProfile);
+document.querySelectorAll("[data-close-sabit]").forEach(el=>el.addEventListener("click", closeSabitProfile));
+document.addEventListener("keydown", e=>{
+  if(e.key==="Escape") closeSabitProfile();
+});
