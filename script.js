@@ -241,3 +241,50 @@ document.querySelectorAll("[data-close-sabit]").forEach(el=>el.addEventListener(
 document.addEventListener("keydown", e=>{
   if(e.key==="Escape") closeSabitProfile();
 });
+
+
+/* ---------- Cancer Metastasis event prize wheel ---------- */
+(() => {
+  const wheel = document.getElementById("eventWheel");
+  const spinButton = document.getElementById("spinEventWheel");
+  const resultBox = document.getElementById("eventWheelResult");
+  const prizeTitle = document.getElementById("eventWheelPrize");
+  const prizeMessage = document.getElementById("eventWheelMessage");
+  if (!wheel || !spinButton || !resultBox || !prizeTitle || !prizeMessage) return;
+
+  const prizes = [
+    { title: "Free Ticket", message: "You landed a free ticket offer for the Cancer Metastasis Event at the National Research Center. Show this result to the event organizer when registering." },
+    { title: "50% OFF", message: "You landed a 50% event-ticket discount. Show this result to the event organizer when registering." },
+    { title: "10% OFF", message: "You landed a 10% event-ticket discount. Show this result to the event organizer when registering." },
+    { title: "Better luck next time", message: "No ticket discount this time. Thank you for taking part — we hope to see you at the event." },
+    { title: "30% OFF", message: "You landed a 30% event-ticket discount. Show this result to the event organizer when registering." }
+  ];
+
+  let currentRotation = 0;
+  let spinning = false;
+
+  spinButton.addEventListener("click", () => {
+    if (spinning) return;
+    spinning = true;
+    spinButton.disabled = true;
+    spinButton.innerHTML = 'Spinning <span>↻</span>';
+    resultBox.hidden = true;
+
+    const selectedIndex = Math.floor(Math.random() * prizes.length);
+    const segmentCenter = (selectedIndex + 0.5) * (360 / prizes.length);
+    const currentMod = ((currentRotation % 360) + 360) % 360;
+    const deltaToPointer = (360 - ((segmentCenter + currentMod) % 360)) % 360;
+    currentRotation += (5 * 360) + deltaToPointer;
+    wheel.style.transform = `rotate(${currentRotation}deg)`;
+
+    window.setTimeout(() => {
+      const prize = prizes[selectedIndex];
+      prizeTitle.textContent = prize.title;
+      prizeMessage.textContent = prize.message;
+      resultBox.hidden = false;
+      spinButton.disabled = false;
+      spinButton.innerHTML = 'Spin again <span>↻</span>';
+      spinning = false;
+    }, 6000);
+  });
+})();
