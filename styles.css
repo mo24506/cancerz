@@ -449,14 +449,14 @@ button{cursor:pointer}
   line-height:1.15;
   letter-spacing:-.015em;
   text-shadow:0 1px 1px rgba(0,0,0,.08);
-  transform:rotate(var(--angle)) translateY(-103px) rotate(calc(-1 * var(--angle)));
+  transform:rotate(var(--angle)) translateY(-103px) rotate(var(--reverse-angle));
   pointer-events:none;
 }
-.event-wheel .label-0{--angle:36deg;color:#fff}
-.event-wheel .label-1{--angle:108deg;color:#fff}
-.event-wheel .label-2{--angle:180deg;color:#fff}
-.event-wheel .label-3{--angle:252deg;color:var(--navy-deep);width:92px;margin-left:-46px;font-size:9px}
-.event-wheel .label-4{--angle:324deg;color:#fff}
+.event-wheel .label-0{--angle:36deg;--reverse-angle:-36deg;color:#fff}
+.event-wheel .label-1{--angle:108deg;--reverse-angle:-108deg;color:#fff}
+.event-wheel .label-2{--angle:180deg;--reverse-angle:-180deg;color:#fff}
+.event-wheel .label-3{--angle:252deg;--reverse-angle:-252deg;color:var(--navy-deep);width:92px;margin-left:-46px;font-size:9px}
+.event-wheel .label-4{--angle:324deg;--reverse-angle:-324deg;color:#fff}
 .event-wheel-pointer{
   position:absolute;
   z-index:4;
@@ -536,7 +536,7 @@ button{cursor:pointer}
   .event-wheel-copy h2{font-size:36px}
   .event-wheel-copy>p:not(.section-kicker){font-size:14px}
   .event-wheel-frame{width:min(88vw,310px)}
-  .event-wheel-label{transform:rotate(var(--angle)) translateY(-92px) rotate(calc(-1 * var(--angle)));font-size:10px}
+  .event-wheel-label{transform:rotate(var(--angle)) translateY(-92px) rotate(var(--reverse-angle));font-size:10px}
   .event-wheel .label-3{font-size:8px}
   .event-wheel-hub{width:48px;height:48px}
 }
