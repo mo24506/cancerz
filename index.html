@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="CancerZ Academy — discover, understand, transform." />
   <title>CancerZ Academy | Discover. Understand. Transform.</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=5" />
 </head>
 <body>
   <header class="site-header" id="top">
@@ -26,6 +26,41 @@
   </header>
 
   <main>
+
+    <section class="event-wheel-section" id="event-wheel" aria-labelledby="eventWheelTitle">
+      <div class="container event-wheel-layout">
+        <div class="event-wheel-copy">
+          <p class="section-kicker">SPECIAL EVENT PROMOTION</p>
+          <h2 id="eventWheelTitle">Cancer Metastasis Event <span>at the National Research Center</span></h2>
+          <p>Spin the wheel for a chance to receive an event ticket offer. Your result will appear below the wheel.</p>
+          <div class="event-wheel-badges">
+            <span>Event Offers</span>
+            <span>Limited-time promotion</span>
+          </div>
+        </div>
+        <div class="event-wheel-game">
+          <div class="event-wheel-pointer" aria-hidden="true"></div>
+          <div class="event-wheel-frame">
+            <div class="event-wheel" id="eventWheel" role="img" aria-label="Prize wheel with five possible event offers">
+              <span class="event-wheel-label label-0">Free Ticket</span>
+              <span class="event-wheel-label label-1">50% OFF</span>
+              <span class="event-wheel-label label-2">10% OFF</span>
+              <span class="event-wheel-label label-3">Better luck next time</span>
+              <span class="event-wheel-label label-4">30% OFF</span>
+            </div>
+            <div class="event-wheel-hub" aria-hidden="true">CZ</div>
+          </div>
+          <button class="btn btn-primary event-wheel-spin" id="spinEventWheel" type="button">Spin to win <span>↻</span></button>
+          <p class="event-wheel-hint">One spin per click. The wheel selects one of the five displayed outcomes at random.</p>
+          <div class="event-wheel-result" id="eventWheelResult" role="status" aria-live="polite" hidden>
+            <p class="section-kicker">YOUR RESULT</p>
+            <h3 id="eventWheelPrize"></h3>
+            <p id="eventWheelMessage"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="hero">
       <div class="hero-orbit orbit-a"></div>
       <div class="hero-orbit orbit-b"></div>
