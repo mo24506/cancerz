@@ -243,7 +243,7 @@ document.addEventListener("keydown", e=>{
 });
 
 
-/* ---------- Cancer Metastasis event prize wheel ---------- */
+/* ---------- Cancer Metastasis event prize wheel: one spin per browser ---------- */
 (() => {
   const wheel = document.getElementById("eventWheel");
   const spinButton = document.getElementById("spinEventWheel");
@@ -252,6 +252,7 @@ document.addEventListener("keydown", e=>{
   const prizeMessage = document.getElementById("eventWheelMessage");
   if (!wheel || !spinButton || !resultBox || !prizeTitle || !prizeMessage) return;
 
+  const STORAGE_KEY = "cancerz_event_wheel_attempt_v1";
   const prizes = [
     { title: "Free Ticket", message: "You landed a free ticket offer for the Cancer Metastasis Event at the National Research Center. Show this result to the event organizer when registering." },
     { title: "50% OFF", message: "You landed a 50% event-ticket discount. Show this result to the event organizer when registering." },
@@ -262,9 +263,41 @@ document.addEventListener("keydown", e=>{
 
   let currentRotation = 0;
   let spinning = false;
+  let previouslyUsed = null;
+
+  try {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (saved !== null) {
+      const parsed = JSON.parse(saved);
+      if (parsed && Number.isInteger(parsed.prizeIndex) && prizes[parsed.prizeIndex]) {
+        previouslyUsed = parsed;
+      }
+    }
+  } catch (error) {
+    console.warn("Could not read the saved wheel attempt.", error);
+  }
+
+  function displayPrize(index) {
+    const prize = prizes[index];
+    prizeTitle.textContent = prize.title;
+    prizeMessage.textContent = prize.message;
+    resultBox.hidden = false;
+  }
+
+  if (previouslyUsed) {
+    const segmentCenter = (previouslyUsed.prizeIndex + 0.5) * (360 / prizes.length);
+    wheel.style.transition = "none";
+    wheel.style.transform = `rotate(${360 - segmentCenter}deg)`;
+    displayPrize(previouslyUsed.prizeIndex);
+    spinButton.disabled = true;
+    spinButton.textContent = "Attempt already used";
+    spinButton.setAttribute("aria-label", "You have already used your one spin on this browser");
+    spinButton.title = "Only one spin is allowed per browser";
+  }
 
   spinButton.addEventListener("click", () => {
-    if (spinning) return;
+    if (spinning || previouslyUsed) return;
+
     spinning = true;
     spinButton.disabled = true;
     spinButton.innerHTML = 'Spinning <span>↻</span>';
@@ -272,18 +305,26 @@ document.addEventListener("keydown", e=>{
 
     const selectedIndex = Math.floor(Math.random() * prizes.length);
     const segmentCenter = (selectedIndex + 0.5) * (360 / prizes.length);
+
+    // Save immediately so refreshing during the spin cannot provide a second attempt.
+    previouslyUsed = { prizeIndex: selectedIndex, usedAt: new Date().toISOString() };
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(previouslyUsed));
+    } catch (error) {
+      console.warn("The browser could not persist the wheel attempt.", error);
+    }
+
     const currentMod = ((currentRotation % 360) + 360) % 360;
     const deltaToPointer = (360 - ((segmentCenter + currentMod) % 360)) % 360;
     currentRotation += (5 * 360) + deltaToPointer;
+    wheel.style.transition = "";
     wheel.style.transform = `rotate(${currentRotation}deg)`;
 
     window.setTimeout(() => {
-      const prize = prizes[selectedIndex];
-      prizeTitle.textContent = prize.title;
-      prizeMessage.textContent = prize.message;
-      resultBox.hidden = false;
-      spinButton.disabled = false;
-      spinButton.innerHTML = 'Spin again <span>↻</span>';
+      displayPrize(selectedIndex);
+      spinButton.disabled = true;
+      spinButton.textContent = "Attempt already used";
+      spinButton.title = "Only one spin is allowed per browser";
       spinning = false;
     }, 6000);
   });
