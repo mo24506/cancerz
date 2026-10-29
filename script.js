@@ -243,3 +243,25 @@ document.addEventListener("keydown", e=>{
 });
 
 
+
+
+/* ---------- Early Bird course pre-registration ---------- */
+const earlyBirdForm = document.getElementById("earlyBirdForm");
+const earlyBirdMessage = document.getElementById("earlyBirdMessage");
+
+earlyBirdForm?.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const name = document.getElementById("earlyBirdName")?.value.trim() || "";
+  const phone = document.getElementById("earlyBirdPhone")?.value.trim() || "";
+  const email = document.getElementById("earlyBirdEmail")?.value.trim() || "";
+  const subject = encodeURIComponent("Early Bird Registration — Understanding Cancer");
+  const body = encodeURIComponent(
+    "Early Bird Registration — Understanding Cancer: From Initiation to Metastasis\n\n" +
+    "Full name: " + name + "\n" +
+    "Mobile number: " + phone + "\n" +
+    "Email address: " + email + "\n\n" +
+    "Course taught by Prof. Dr. Hussein Sabit.\nCourse dates: 19–24 January 2027."
+  );
+  earlyBirdMessage.textContent = "Your email app will open with your registration details. Please send the email to complete your pre-registration request; our team can then contact you with the next steps.";
+  window.location.href = "mailto:mszahra101@gmail.com?subject=" + subject + "&body=" + body;
+});
