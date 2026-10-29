@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="CancerZ Academy — discover, understand, transform." />
   <title>CancerZ Academy | Discover. Understand. Transform.</title>
-  <link rel="stylesheet" href="styles.css?v=6" />
+  <link rel="stylesheet" href="styles.css?v=7" />
 </head>
 <body>
   <header class="site-header" id="top">
@@ -27,14 +27,47 @@
 
   <main>
 
-        <section class="course-prereg-section" id="course-prereg" aria-labelledby="coursePreregTitle">
-      <div class="container course-prereg-layout">
-        <div class="course-prereg-copy">
-          <p class="section-kicker">CANCERZ ACADEMY • ENROLMENT</p>
-          <h2 id="coursePreregTitle">Course <span>Pre-Registration</span></h2>
-          <p>Take the first step toward your next stage in cancer science. Explore our four learning tiers and choose the pathway that fits your goals.</p>
+    <section class="early-bird-section" id="early-bird" aria-labelledby="earlyBirdTitle">
+      <div class="container early-bird-grid">
+        <div class="early-bird-copy">
+          <p class="section-kicker">CANCER BIOLOGY COURSE • CANCERZ ACADEMY</p>
+          <h1 id="earlyBirdTitle">Early Bird<br><span>Registration</span></h1>
+          <p class="early-bird-course-label">UNDERSTANDING CANCER</p>
+          <h2>From Initiation to Metastasis</h2>
+          <p class="early-bird-description">Explore cancer biology across five focused sessions—from the first cellular changes to metastatic spread and treatment strategies.</p>
+          <div class="early-bird-instructor">
+            <span class="mini-label">TAUGHT BY</span>
+            <strong>Prof. Dr. Hussein Sabit</strong>
+          </div>
+          <div class="early-bird-details">
+            <div><span>COURSE DATES</span><strong>19–24 January 2027</strong></div>
+            <div><span>FORMAT</span><strong>5 focused sessions</strong></div>
+          </div>
+          <div class="early-bird-sessions">
+            <p><b>01</b> The Origins of Cancer — From Mutations to Malignancy</p>
+            <p><b>02</b> Hallmarks of Cancer — How Tumors Grow and Survive</p>
+            <p><b>03</b> Tumor Microenvironment &amp; Cancer Signaling</p>
+            <p class="early-bird-holiday">Friday, 22 January · Mid-course holiday · No session</p>
+            <p><b>04</b> Cancer Metastasis — From Primary Tumor to Distant Organs</p>
+            <p><b>05</b> Cancer Therapeutics — From Molecular Targets to Treatment Strategies</p>
+          </div>
         </div>
-        <a class="btn btn-primary course-prereg-button" href="#courses">Pre-register now <span>→</span></a>
+        <div class="early-bird-form-card">
+          <p class="section-kicker">SECURE YOUR PLACE</p>
+          <h2>Register your interest</h2>
+          <p class="early-bird-form-intro">Leave your details below. Our team will contact you with the next steps and registration information.</p>
+          <form id="earlyBirdForm" class="early-bird-form">
+            <label for="earlyBirdName">Full name</label>
+            <input id="earlyBirdName" name="name" type="text" autocomplete="name" placeholder="Enter your full name" required>
+            <label for="earlyBirdPhone">Mobile number</label>
+            <input id="earlyBirdPhone" name="phone" type="tel" autocomplete="tel" placeholder="e.g. +20 1X XXX XXXX" required>
+            <label for="earlyBirdEmail">Email address</label>
+            <input id="earlyBirdEmail" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+            <button class="btn btn-primary early-bird-submit" type="submit">Pre-register now <span>→</span></button>
+            <p class="early-bird-privacy">By submitting, you agree that CancerZ Academy may contact you about this course.</p>
+            <p class="early-bird-form-message" id="earlyBirdMessage" role="status" aria-live="polite"></p>
+          </form>
+        </div>
       </div>
     </section>
 
@@ -359,6 +392,6 @@
     </div>
   </div>
 
-  <script src="script.js?v=7"></script>
+  <script src="script.js?v=8"></script>
 </body>
 </html>
