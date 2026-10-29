@@ -399,3 +399,70 @@ button{cursor:pointer}
   .course-prereg-copy h2{font-size:32px}
   .course-prereg-copy p:last-child{font-size:13px}
 }
+
+
+/* ---------- Early Bird Registration landing section ---------- */
+.early-bird-section{
+  position:relative;overflow:hidden;padding:68px 0 72px;
+  background:radial-gradient(circle at 88% 8%,rgba(0,162,158,.10),transparent 28%),
+    linear-gradient(135deg,#fff 0%,#F8F9FC 58%,#F5F1F8 100%);
+  border-bottom:1px solid var(--line);
+}
+.early-bird-grid{
+  display:grid;grid-template-columns:minmax(0,1.08fr) minmax(320px,.72fr);
+  gap:clamp(30px,5vw,72px);align-items:start;
+}
+.early-bird-copy h1{
+  margin:0 0 18px;font-size:clamp(58px,7.2vw,98px);line-height:.91;
+  letter-spacing:-.075em;font-weight:850;color:var(--navy-deep);
+}
+.early-bird-copy h1 span{color:var(--purple)}
+.early-bird-course-label{
+  margin:26px 0 4px;color:var(--teal);font-size:12px;font-weight:800;letter-spacing:.14em;
+}
+.early-bird-copy h2{
+  margin:0;color:var(--navy-deep);font-size:clamp(24px,3vw,36px);
+  line-height:1.15;letter-spacing:-.045em;
+}
+.early-bird-description{max-width:650px;color:var(--muted);font-size:16px;line-height:1.75;margin:15px 0 22px}
+.early-bird-instructor{display:flex;flex-direction:column;gap:3px;margin:0 0 24px}
+.early-bird-instructor .mini-label{margin:0;font-size:10px;letter-spacing:.14em}
+.early-bird-instructor strong{color:var(--navy);font-size:18px}
+.early-bird-details{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:20px}
+.early-bird-details div{display:flex;flex-direction:column;gap:3px;padding:12px 15px;border:1px solid var(--line);background:rgba(255,255,255,.8);border-radius:14px}
+.early-bird-details span{font-size:9px;font-weight:800;letter-spacing:.12em;color:var(--teal)}
+.early-bird-details strong{font-size:13px;color:var(--navy)}
+.early-bird-sessions{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff}
+.early-bird-sessions p{margin:0;padding:11px 14px;display:flex;gap:12px;align-items:baseline;color:#34405B;font-size:12px;line-height:1.5;border-bottom:1px solid #EEF0F5}
+.early-bird-sessions p:nth-child(even){background:#F8F6FB}
+.early-bird-sessions p:last-child{border-bottom:0}
+.early-bird-sessions p b{flex:0 0 23px;color:var(--purple);font-size:12px}
+.early-bird-sessions .early-bird-holiday{display:block;background:#EEF9F8;color:#087D7A;font-size:10px;font-weight:750;text-transform:uppercase;letter-spacing:.045em}
+.early-bird-form-card{
+  padding:clamp(24px,3vw,36px);border-radius:26px;background:#fff;
+  border:1px solid rgba(232,234,241,.95);box-shadow:0 24px 70px rgba(14,26,67,.11);
+  position:relative;
+}
+.early-bird-form-card:before{content:"";position:absolute;top:0;left:28px;right:28px;height:4px;border-radius:0 0 5px 5px;background:linear-gradient(90deg,var(--teal),var(--purple))}
+.early-bird-form-card .section-kicker{margin:0 0 8px}
+.early-bird-form-card h2{margin:0;color:var(--navy-deep);font-size:30px;line-height:1.1;letter-spacing:-.05em}
+.early-bird-form-intro{color:var(--muted);font-size:13px;line-height:1.65;margin:12px 0 22px}
+.early-bird-form{display:flex;flex-direction:column;gap:8px}
+.early-bird-form label{font-size:12px;font-weight:750;color:#34405B;margin-top:6px}
+.early-bird-form input{width:100%;min-height:48px;border:1px solid #DDE2EC;border-radius:12px;padding:12px 14px;background:#FCFCFE;color:var(--ink);outline:none;transition:border-color .2s,box-shadow .2s}
+.early-bird-form input:focus{border-color:var(--teal);box-shadow:0 0 0 3px rgba(0,162,158,.12)}
+.early-bird-submit{width:100%;justify-content:center;margin-top:12px;min-height:50px}
+.early-bird-privacy{font-size:10px;line-height:1.55;color:#7A8498;margin:6px 0 0}
+.early-bird-form-message{font-size:12px;line-height:1.6;margin:2px 0 0;color:var(--navy);overflow-wrap:anywhere}
+@media(max-width:900px){
+ .early-bird-grid{grid-template-columns:1fr;gap:32px}
+ .early-bird-copy h1{font-size:clamp(58px,12vw,86px)}
+ .early-bird-form-card{max-width:620px;width:100%}
+}
+@media(max-width:520px){
+ .early-bird-section{padding:42px 0}
+ .early-bird-copy h1{font-size:58px}
+ .early-bird-details{display:grid;grid-template-columns:1fr 1fr}
+ .early-bird-sessions p{font-size:11px;padding:10px}
+ .early-bird-form-card{padding:24px 20px}
+}
