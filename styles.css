@@ -466,3 +466,6 @@ button{cursor:pointer}
  .early-bird-sessions p{font-size:11px;padding:10px}
  .early-bird-form-card{padding:24px 20px}
 }
+
+.early-bird-pdf-button{display:inline-flex;align-items:center;gap:10px;margin:0 0 22px;padding:12px 18px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--navy);font-size:13px;font-weight:750;box-shadow:0 8px 24px rgba(14,26,67,.06);transition:transform .2s,border-color .2s}
+.early-bird-pdf-button:hover{transform:translateY(-2px);border-color:var(--teal);color:var(--purple)}
