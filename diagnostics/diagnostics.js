@@ -140,10 +140,13 @@
     if (meta.modality) document.querySelectorAll(".dx-modality").forEach((el) => { el.textContent = meta.modality; });
     const t = meta.metrics && meta.metrics.test;
     if (t) {
+      const neg = t.tn + t.fp;
       $("dxModel").textContent =
-        "Model performance on " + t.n + " held-out test images: sensitivity " + pct(t.sensitivity) +
-        ", specificity " + pct(t.specificity) + ", AUC " + t.auc.toFixed(3) +
-        (meta.metrics.patient_grouped ? "." : " (not grouped by patient, so figures may be optimistic).");
+        "Experimental model. On " + t.n + " test images it caught " + t.tp + " of " + (t.tp + t.fn) +
+        " cancers (sensitivity " + pct(t.sensitivity) + ") and correctly cleared " + t.tn + " of " + neg +
+        " non-cancer images (specificity " + pct(t.specificity) + "); AUC " + t.auc.toFixed(2) + ". " +
+        "The test set is small" + (meta.metrics.patient_grouped ? "" : " and was not grouped by patient") +
+        ", so real-world results may be worse. It can miss cancers.";
     }
     if (file) $("dxGo").disabled = false;
   }
