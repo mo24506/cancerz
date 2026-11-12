@@ -6,7 +6,6 @@
   <meta name="description" content="CancerZ Academy — discover, understand, transform." />
   <title>CancerZ Academy | Discover. Understand. Transform.</title>
   <link rel="stylesheet" href="styles.css?v=8" />
-  <link rel="stylesheet" href="diagnostics/diagnostics.css?v=1" />
 </head>
 <body>
   <header class="site-header" id="top">
@@ -21,7 +20,6 @@
         <a href="#courses">Courses</a>
         <a href="#tracks">Learning Tracks</a>
         <a href="#about">About</a>
-        <a href="#diagnostics">Diagnostics</a>
         <a href="#contact" class="nav-cta">Join Academy</a>
       </nav>
     </div>
@@ -119,52 +117,6 @@
             <button class="circle-arrow" data-course="Foundations of Cancer Biology" aria-label="Enroll">↗</button>
           </div>
         </div>
-      </div>
-    </section>
-
-    <section class="section dx-section" id="diagnostics" aria-labelledby="dxTitle">
-      <div class="container dx-grid">
-        <div class="dx-copy">
-          <p class="section-kicker">CANCERZ DIAGNOSTICS · EXPERIMENTAL</p>
-          <h2 id="dxTitle">Upload your breast imaging.<br><span>Get an AI screening result in seconds.</span></h2>
-          <p class="dx-lead">Our AI model looks at a breast <span class="dx-modality">ultrasound</span> image and tells you whether it sees features that deserve a closer look by a doctor.</p>
-          <ol class="dx-steps">
-            <li><span class="dx-num">1</span><span>Upload your image<small>PNG or JPG, taken from your imaging report or CD</small></span></li>
-            <li><span class="dx-num">2</span><span>Press “Analyze image”<small>The AI reads it directly in your browser</small></span></li>
-            <li><span class="dx-num">3</span><span>See your result and next step<small>Then take it to your doctor</small></span></li>
-          </ol>
-          <ul class="dx-badges">
-            <li>🔒 Private: never uploaded</li>
-            <li>⚡ Instant</li>
-            <li>Free</li>
-          </ul>
-        </div>
-
-        <div class="dx-card">
-          <h3>Analyze an image <span class="dx-beta">Experimental</span></h3>
-          <p class="dx-hint">Use a clear <span class="dx-modality">ultrasound</span> image. Other image types give meaningless results.</p>
-          <div id="dxUnavailable" class="dx-notice" hidden>CancerZ Diagnostics is launching soon. Please check back shortly.</div>
-          <label class="dx-drop" id="dxDrop">
-            <input type="file" id="dxFile" accept="image/png,image/jpeg">
-            <strong>Choose an image</strong>
-            <span id="dxDropText">Click to choose an image, or drag it here</span>
-          </label>
-          <img id="dxPreview" class="dx-preview" alt="Preview of the selected image" hidden>
-          <button class="btn btn-primary dx-go" id="dxGo" type="button" disabled>Analyze image <span>→</span></button>
-
-          <div id="dxResult" class="dx-result" role="status" aria-live="polite" hidden>
-            <p class="dx-label" id="dxLabel"></p>
-            <p class="dx-verdict" id="dxVerdict"></p>
-            <div class="dx-meter" id="dxMeter" aria-hidden="true"><i id="dxBar"></i><b id="dxThr"></b></div>
-            <p class="dx-meterlabel" id="dxMeterLabel"><span id="dxScore"></span><span id="dxThrLabel"></span></p>
-            <p class="dx-next" id="dxNext"></p>
-          </div>
-          <button class="btn btn-ghost dx-again" id="dxAgain" type="button" hidden>Analyze another image</button>
-          <p class="dx-model" id="dxModel"></p>
-        </div>
-      </div>
-      <div class="container">
-        <div class="dx-banner" role="note"><strong>This is an experimental AI tool, not a medical diagnosis.</strong> It is a research and educational tool, not a medical device. A “no suspicious features” result does not rule out cancer, and a flagged result does not mean you have it. Only a qualified doctor can diagnose. Accuracy is limited and will be lower on images from other hospitals or scanners.</div>
       </div>
     </section>
 
@@ -313,7 +265,6 @@
         <a href="#tracks">Tracks</a>
         <a href="#mentors">Mentors</a>
         <a href="#about">About</a>
-        <a href="#diagnostics">Diagnostics</a>
       </div>
       <p class="copyright">© 2026 CancerZ Academy</p>
     </div>
@@ -443,7 +394,5 @@
   </div>
 
   <script src="script.js?v=9"></script>
-  <script src="diagnostics/preprocess.js?v=1"></script>
-  <script src="diagnostics/diagnostics.js?v=1"></script>
 </body>
 </html>
